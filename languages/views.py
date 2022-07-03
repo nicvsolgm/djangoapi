@@ -7,7 +7,12 @@ from .serializers import LanguageSerializer,ParadigmSerializer,ProgrammerSeriali
 class LanguageView(viewsets.ModelViewSet):
     queryset = Language.objects.all()
     serializer_class = LanguageSerializer
+    #template_name = "languages/home.html"
     #permission_classes =(permissions.IsAuthenticatedOrReadOnly,)
+
+#def home(request):
+#    return render(request, languages/home.html, name = "home")
+
 
 class ParadigmView(viewsets.ModelViewSet):
     queryset = Paradigm.objects.all()
